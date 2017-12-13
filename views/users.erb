@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>유저 목록</title>
+</head>
+<body>
+  <h2>유저 목록입니다.</h2>
+  <!-- index랑 같이 보여주기 : each_with_index -->
+  <!-- 역순으로 보여주기 : reverse -->
+  <% @users.reverse.each_with_index do |user, idx| %>
+  <%= @users.length - idx %> 번째 유저 <br />
+  제목 : <%= user[0] %> <br />
+  내용 : <%= user[1] %>
+  가입날짜 : <%= user[2] %>
+  <hr />
+  <% end %>
+  <a href="/"> 홈으로 가기 </a>
+</body>
+</html>
